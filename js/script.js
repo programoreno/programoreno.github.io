@@ -37,7 +37,7 @@ function aplicarTema(tema) {
     let cuerpo = document.body;
     let titulos = document.getElementById("titulos");
     let ima = document.getElementById("imagenBtn");
-    let foot = document.querySelector('footer');
+    let foot = document.querySelector("footer");
     let link = document.getElementById("link");
 
     if (tema === "oscuro") {
