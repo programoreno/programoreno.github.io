@@ -52,6 +52,7 @@ function aplicarTema(tema) {
         titulos.style.color = "#202020";
         link.style.color = "#202020";
         foot.style.backgroundColor = "#6482AD";
+        // #f4d03f 
     }
 
     // Guardar la preferencia del tema en localStorage
