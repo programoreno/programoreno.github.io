@@ -1,7 +1,6 @@
 *{
   margin:0;
   padding:0;
-  box-sizing: border-box;
 }
 
 /* NAV */
@@ -37,6 +36,7 @@ body{
   text-align: center;
   color:#202020;
 
+  box-sizing: border-box;
   overflow-x: hidden;
   width: 100%;
 }
@@ -87,8 +87,13 @@ p{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    position: static;
-    bottom: auto;
+    position: absolute;
+    /*bottom: auto;*/
+  }
+}
+@media (max-width:450px) {
+  #footer{
+    position: relative;
   }
 }
 #redes  img{
