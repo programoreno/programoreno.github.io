@@ -57,7 +57,9 @@ main{
   #titulos > p{
     padding: 25px;
   }
-
+  main{
+    padding: 0;
+  }
 }
 h1{
   font-size: 40px;
