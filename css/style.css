@@ -35,6 +35,9 @@ body{
   align-items: center;
   text-align: center;
   color:#202020;
+
+  overflow-x: hidden;
+  width: 100%;
 }
 #titulos{
   width: 750px;
