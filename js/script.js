@@ -38,7 +38,7 @@ function aplicarTema(tema) {
     let titulos = document.getElementById("titulos");
     let ima = document.getElementById("imagenBtn");
     let foot = document.getElementById("footer");
-    //let link = document.getElementById("link");
+    let link = document.getElementById("link");
 
     if (tema === "oscuro") {
         ima.src = "img/moon.png";
