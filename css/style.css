@@ -45,6 +45,7 @@ body{
 }
 #link{
   color:#202020;
+  text-decoration:none;
 }
 #link:hover{
   font-weight:bold;
