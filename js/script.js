@@ -44,13 +44,13 @@ function aplicarTema(tema) {
         ima.src = "img/moon.png";
         cuerpo.style.backgroundColor = "#003092";
         titulos.style.color = "#fff";
-        //link.style.color = "#fff";
+        link.style.color = "#fff";
         foot.style.backgroundColor = "#00879E";
     } else if (tema === "claro") {
         ima.src = "img/sun.png";
         cuerpo.style.backgroundColor = "#E2DAD6";
         titulos.style.color = "#202020";
-        //link.style.color = "#202020";
+        link.style.color = "#202020";
         foot.style.backgroundColor = "#6482AD";
         // #f4d03f 
     }
