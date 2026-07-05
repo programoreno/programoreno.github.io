@@ -1,47 +1,102 @@
-if (document.addEventListener) {
-	window.addEventListener("load", inicio);
-} else if (document.attachEvent) {
-	window.attachEvent("onload", inicio);
-}
+document.addEventListener('DOMContentLoaded', () => {
 
-function inicio(){
-   let tema = document.getElementById("tema");
+  /* =========================================================
+     1) DATOS DE PROYECTOS
+     -> Sustituye "url" por el enlace real de cada proyecto
+        (repositorio de GitHub, demo desplegada, etc.)
+  ========================================================= */
+  const proyectos = [
+    {
+      nombre: 'PvZ Wiki',
+      descripcion: 'Wiki de PvZ, construida como una SPA en Angular 18, sin backend ni base de datos (usando solo JSON locales).',
+      tags: ['Angular'],
+      url: 'https://pvzbfn.com'
+    },
+    {
+      nombre: 'ClimaYa',
+      descripcion: 'App del tiempo con geolocalización y consumo de una API pública en tiempo real.',
+      tags: ['JavaScript', 'API REST'],
+      url: 'https://github.com/guillermomoreno/climaya'
+    },
+    {
+      nombre: 'ShopLite',
+      descripcion: 'Tienda online de ejemplo con catálogo filtrable, carrito y checkout simulado en React.',
+      tags: ['React', 'Vite'],
+      url: 'https://github.com/guillermomoreno/shoplite'
+    },
+    {
+      nombre: 'PixelBoard',
+      descripcion: 'Lienzo colaborativo de píxeles en tiempo real, practicando canvas y eventos del DOM.',
+      tags: ['Canvas API', 'JavaScript'],
+      url: 'https://github.com/guillermomoreno/pixelboard'
+    }
+  ];
 
-   if (document.addEventListener) {
-		tema.addEventListener("click", cambio_tema);
-	} else if (document.attachEvent) {
-		tema.attachEvent("onclick", cambio_tema);
-	}
-}
+  /* Degradados discretos para los "thumbnails", en tonos de la propia paleta */
+  const degradados = [
+    'linear-gradient(135deg, #123821 0%, #3FBE7C 100%)',
+    'linear-gradient(135deg, #0F2E1C 0%, #6FD9A3 100%)',
+    'linear-gradient(135deg, #16412A 0%, #2FA06B 100%)',
+    'linear-gradient(135deg, #0C2717 0%, #58C88E 100%)',
+    'linear-gradient(135deg, #123821 0%, #7FE0AC 100%)',
+    'linear-gradient(135deg, #103322 0%, #45C283 100%)'
+  ];
 
-function cambio_tema(){
-	let tex = tema.getAttribute("color");
-	let cuerpo = document.body;
-	let titulos = document.getElementById("titulos");
-	let ima = document.getElementById("imagenBtn");
-	//let foot = document.getElementById('footer');
-	let foot = document.querySelector('footer');
+  const iconoEnlace = `<svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-	if(tex == "oscuro"){
-		tema.setAttribute("color","claro");
+  const grid = document.getElementById('projectsGrid');
+  grid.innerHTML = proyectos.map((p, i) => `
+    <a class="project-card" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto ${p.nombre}">
+      <div class="project-thumb" style="background:${degradados[i % degradados.length]}">
+        <span class="project-thumb-mark">${iconoEnlace}</span>
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <h3>${p.nombre}</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <p>${p.descripcion}</p>
+        <ul class="project-tags">${p.tags.map(t => `<li>${t}</li>`).join('')}</ul>
+      </div>
+    </a>
+  `).join('');
 
-		//cambio imagen
-		ima.src = "img/sun.png";
+  /* =========================================================
+     2) MENÚ MÓVIL
+  ========================================================= */
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
 
-		//aplicando estilos
-		cuerpo.style.backgroundColor = "#E2DAD6";
-		titulos.style.color="#202020";
-		foot.style.backgroundColor="#6482AD";
+  navToggle.addEventListener('click', () => {
+    const abierto = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(abierto));
+  });
 
-	}else if(tex == "claro"){
-		tema.setAttribute("color","oscuro");
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 
-		//cambio imagen
-		ima.src = "img/moon.png";
+  /* =========================================================
+     3) REVELADO SUAVE AL HACER SCROLL
+  ========================================================= */
+  const revelables = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
 
-		//aplicando estilos
-		cuerpo.style.backgroundColor = "#1C1678";
-		titulos.style.color="#fff";
-		foot.style.backgroundColor="#8576FF";
-	}
-}
+  revelables.forEach(el => observer.observe(el));
+
+  /* =========================================================
+     4) AÑO EN EL FOOTER
+  ========================================================= */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+});

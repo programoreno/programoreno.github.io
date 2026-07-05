@@ -1,48 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Guille" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/G.jpg">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" type="text/javascript"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>GUILLERMO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guillermo Moreno</title>
+<meta name="description" content="Portfolio de Guillermo Moreno, estudiante de DAW/DAM especializado en frontend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
-  <nav id="menu">
-    <button id="tema" color="oscuro">
-      <img src="img/moon.png" id="imagenBtn" alt="theme"/>
-    </button>
-</nav>
 
-  <section id="titulos">
-    <h1>Hello, I'm Guillermo</h1>
-    <p>
-      I specialize in building high-quality web and mobile applications with a focus on user experience.
-      <br><br>
-      I have experience with both front-end technologies like Angular and back-end development like Spring Boot, creating scalable solutions. I've worked on a variety of projects that allowed me to improve my problem-solving and collaboration skills.
-      <br><br>
-      I’m always looking to learn new technologies and build impactful solutions. Check out my projects<br>
-        <a href="https://guillermooom.github.io/visualcsswiki/" class="link">Visual css wiki</a>
-    </p>
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <a class="brand" href="#inicio" aria-label="Inicio">
+    <svg viewBox="0 0 40 40" class="brand-mark" aria-hidden="true">
+      <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <text x="20" y="26" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="15" fill="currentColor">GM</text>
+    </svg>
+    <span>Guillermo Moreno</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#perfil">Perfil</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto" class="nav-cta">Contactar</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero reveal">
+    <div class="hero-copy">
+      <p class="kicker">Frontend Developer</p>
+      <h1>Interfaces claras.<br>Código cuidado.</h1>
+      <p class="hero-lead">
+        Construyo la parte de la web con la que las personas interactúan directamente: rápida, accesible
+        y fiel al diseño, usando HTML, CSS y JavaScript como base de cada proyecto.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Hablemos</a>
+      </div>
+    </div>
+
+    <div class="hero-graphic" aria-hidden="true">
+      <svg viewBox="0 0 320 320" class="hero-svg">
+        <circle cx="160" cy="160" r="150" class="ring ring-1"/>
+        <circle cx="160" cy="160" r="112" class="ring ring-2"/>
+        <circle cx="160" cy="160" r="74" class="ring ring-3"/>
+        <text x="160" y="182" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="72" class="mark">GM</text>
+      </svg>
+    </div>
   </section>
 
-  <main>
-    
+  <!-- ===== STATS ===== -->
+  <section class="stats reveal">
+    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Titulaciones · DAW &amp; DAM</span></div>
+    <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Proyectos frontend</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Responsive &amp; accesible</span></div>
+  </section>
 
-  </main>
-
-  <footer>
-    <a href="mailto:porgramoreno@gmail.com">porgramoreno@gmail.com</a>
-    <div id="redes">
-      <a href="https://github.com/guillermooom" target="_blank"><img src="img/github.png" alt="github"></a>
-      <a href="https://www.linkedin.com/in/guillermo-moreno-garc%C3%ADa-955a27199/" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
-      <a href="https://leetcode.com/u/programoreno/" target="_blank"><img src="img/leetcode.png" alt="leetcode"></a>
+  <!-- ===== PERFIL ===== -->
+  <section id="perfil" class="section reveal">
+    <div class="section-head">
+      <p class="eyebrow">Perfil</p>
+      <h2>Sobre mí</h2>
     </div>
+
+    <div class="about-grid">
+      <p class="about-text">
+        Soy Guillermo Moreno, estudiante de <strong>Desarrollo de Aplicaciones Web (DAW)</strong> y
+        <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, especializado en frontend.
+        Me interesa la parte del desarrollo donde el diseño se convierte en producto: cuidar la
+        semántica, la accesibilidad y el rendimiento de cada interfaz que construyo, sin perder de
+        vista la experiencia de quien la usa.
+      </p>
+
+      <div class="about-card">
+        <div class="about-row"><span>Formación</span><span>Ciclo Superior DAW / DAM</span></div>
+        <div class="about-row"><span>Especialidad</span><span>Frontend &amp; UI</span></div>
+        <div class="about-row"><span>Ubicación</span><span>España</span></div>
+        <div class="about-row"><span>Idiomas</span><span>Español, Inglés</span></div>
+        <div class="about-row"><span>Estado</span><span class="badge">Disponible</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section id="habilidades" class="section reveal">
+    <div class="section-head">
+      <p class="eyebrow">Habilidades</p>
+      <h2>Mi stack</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 8h8M8.5 12h7l-.4 5-3.1 1-3.1-1-.2-2" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Maquetación</h3>
+        <ul>
+          <li>HTML5 semántico</li>
+          <li>CSS3 &amp; Sass</li>
+          <li>Flexbox &amp; Grid</li>
+          <li>Diseño responsive</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 4L3 12l5 8M16 4l5 8-5 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Lógica e interacción</h3>
+        <ul>
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>React &amp; Vue</li>
+          <li>Consumo de APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2 2M7.6 16.4l-2 2M18.4 18.4l-2-2M7.6 7.6l-2-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Herramientas</h3>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>Vite</li>
+          <li>Figma</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="section reveal">
+    <div class="section-head">
+      <p class="eyebrow">Proyectos</p>
+      <h2>Trabajo reciente</h2>
+      <p class="section-sub">Selección de proyectos frontend. Cada tarjeta enlaza al repositorio o a la demo real.</p>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section contact reveal">
+    <div class="contact-inner">
+      <p class="eyebrow">Contacto</p>
+      <h2>¿Hablamos de tu próximo proyecto?</h2>
+      <p class="contact-lead">Estoy disponible para trabajos y colaboraciones frontend. Escríbeme y te respondo en breve.</p>
+
+      <a href="mailto:programoreno@gmail.com" class="btn btn-primary btn-lg">programoreno@gmail.com</a>
+
+      <div class="social-row">
+        <a href="https://github.com/programoreno" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot-sep">·</span>
+        <a href="https://www.linkedin.com/in/programoreno/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Guillermo Moreno. Hecho con HTML, CSS y JavaScript.</p>
   </footer>
+
+</main>
+
+<script src="script-pro.js"></script>
 </body>
 </html>
