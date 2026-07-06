@@ -13,22 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
       url: 'https://pvzbfn.com'
     },
     {
-      nombre: 'ClimaYa',
-      descripcion: 'App del tiempo con geolocalización y consumo de una API pública en tiempo real.',
+      nombre: 'SkylandersAPI',
+      descripcion: 'Aplicación web que consume una API en tiempo real para buscar Skylanders y filtrar personajes.',
       tags: ['JavaScript', 'API REST'],
-      url: 'https://github.com/guillermomoreno/climaya'
-    },
-    {
-      nombre: 'ShopLite',
-      descripcion: 'Tienda online de ejemplo con catálogo filtrable, carrito y checkout simulado en React.',
-      tags: ['React', 'Vite'],
-      url: 'https://github.com/guillermomoreno/shoplite'
-    },
-    {
-      nombre: 'PixelBoard',
-      descripcion: 'Lienzo colaborativo de píxeles en tiempo real, practicando canvas y eventos del DOM.',
-      tags: ['Canvas API', 'JavaScript'],
-      url: 'https://github.com/guillermomoreno/pixelboard'
+      url: 'https://programoreno.github.io/SkylandersAPI/'
     }
   ];
 
