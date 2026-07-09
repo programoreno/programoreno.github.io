@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
       descripcion: 'Aplicación web que consume una API en tiempo real para buscar Skylanders y filtrar personajes.',
       tags: ['JavaScript', 'API REST'],
       url: 'https://programoreno.github.io/SkylandersAPI/'
+    },
+    {
+      nombre: 'DEMO PsinergiaNR',
+      descripcion: 'Es la versión de prueba de un portfolio web diseñado para una psicóloga, mostrando su enfoque terapéutico, servicios y contacto.',
+      tags: ['React'],
+      url: 'https://psinergianr.vercel.app/'
     }
   ];
 
