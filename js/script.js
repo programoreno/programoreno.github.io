@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
       descripcion: 'Es la versión de prueba de un portfolio web diseñado para una psicóloga, mostrando su enfoque terapéutico, servicios y contacto.',
       tags: ['React'],
       url: 'https://psinergianr.vercel.app/'
+    },
+    {
+      nombre: 'SK Akinator',
+      descripcion: 'Pagina para poner a prueba tu conocimineto sobre el primero juego de Skylander usando solo JavaScritp y Css',
+      tags: ['JavaScript, Css'],
+      url: 'https://programoreno.github.io/skaquinator/'
     }
   ];
 
