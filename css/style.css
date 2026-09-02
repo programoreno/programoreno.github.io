@@ -384,3 +384,121 @@ h1, h2, h3{ font-family: var(--font-display); margin:0; color: var(--ink); }
   .nav-toggle{ display:flex; }
   .skills-grid{ grid-template-columns: 1fr; }
 }
+
+/* Footer Principal */
+.main-footer {
+    width: 100%;
+    background-color: #080b10;
+    border-top: 2px solid var(--gold);
+    margin-top: auto; /* Empuja el footer al fondo si hay poco contenido */
+    color: var(--text-color);
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1 1 220px; /* Crece y se adapta según el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-title {
+    color: var(--gold);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.footer-subtitle {
+    color: var(--gold);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    line-height: 1.4;
+}
+
+/* Enlaces de Juegos */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-contact-item a:hover {
+    color: var(--gold);
+}
+
+/* Contacto y Redes */
+.footer-contact-item {
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.social-links a {
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #30363d;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    color: #000;
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+/* Parte Inferior (Copyright) */
+.footer-bottom {
+    border-top: 1px solid #1a2232;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* Ajustes Responsive para móviles */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
