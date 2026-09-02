@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nombre: 'SK Akinator',
       descripcion: 'Pagina para poner a prueba tu conocimineto sobre el primero juego de Skylander usando solo JavaScritp y Css',
       tags: ['JavaScript', 'CSS'],
-      url: 'https://programoreno.github.io/skaquinator/'
+      url: 'https://programoreno.github.io/Skaquinator/'
     },
     {
       nombre: 'SKYLANDLE',
