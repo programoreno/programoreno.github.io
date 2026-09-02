@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
       descripcion: 'Pagina para poner a prueba tu conocimineto sobre el primero juego de Skylander usando solo JavaScritp y Css',
       tags: ['JavaScript', 'CSS'],
       url: 'https://programoreno.github.io/skaquinator/'
+    },
+    {
+      nombre: 'SKYLANDLE',
+      descripcion: 'Wordle diario de Skylanders (fase beta): adivina el personaje con pistas. Desarrollado con JavaScript y CSS.',
+      tags: ['JavaScript', 'CSS'],
+      url: 'https://programoreno.github.io/Skylandle/'
     }
   ];
 
