@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
       descripcion: 'Wordle diario de Skylanders (fase beta): adivina el personaje con pistas. Desarrollado con JavaScript y CSS.',
       tags: ['JavaScript', 'CSS'],
       url: 'https://programoreno.github.io/Skylandle/'
+    },
+    {
+      nombre: 'SkylanderPicker',
+      descripcion: 'Ultimate picker de Skylader donde se incluyen todos los personajes. Aún sigue en desarrollo para traer todo de la saga',
+      tags: ['JavaScript', 'CSS'],
+      url: 'https://programoreno.github.io/SkylanderPicker/'
     }
   ];
 
